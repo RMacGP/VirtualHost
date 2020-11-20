@@ -1,8 +1,15 @@
+# Bourne shell script
+# Create subdomain on localhost for apache2 on ubuntu
+
+# PATHTOAPACHE2 = /etc/apache2/
+
 echo "Enter subdomain name for localhost:"
 read WEBSITE
-echo $WEBSITE
 
-# sudo mkdir /var/www/$WEBSITE
+# echo $WEBSITE
+
+sudo mkdir -v /var/www/$WEBSITE
+
 # sudo echo "<!doctype html>
 # <html lang="en">
 #   <head>
@@ -36,4 +43,5 @@ echo $WEBSITE
 
 # sort ./000-default.conf
 
-cat test.txt > $WEBSITE.localhost.conf
+cat /etc/apache2/sites-available/000-default.conf > $WEBSITE.localhost.conf
+
